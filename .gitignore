@@ -36,7 +36,6 @@ yarn-error.log*
 next-env.d.ts
 
 #resource
-/components/resource
 AGENTS.md
 Curriculum.md
 DESIGN.md
