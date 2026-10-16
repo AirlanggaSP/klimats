@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 11, 15, 16;
+  --background-end-rgb: 11, 15, 16;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: #0b0f10;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Custom minimalist scrollbar for Bio-Informatics look */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0b0f10;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #212628;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #34d399;
+}
+
+/* Monospace utility for scientific data */
+.font-mono-sci {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+/* Zero design slop border */
+.border-sci {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.markdown-content > * + * {
+  margin-top: 1rem;
+}
+
+.markdown-content p {
+  color: #cbd5e1;
+  font-size: 0.9rem;
+  line-height: 1.75;
+}
+
+.markdown-content strong {
+  color: #f8fafc;
+  font-weight: 600;
+}
+
+.markdown-content ul,
+.markdown-content ol {
+  padding-left: 1.5rem;
+  color: #cbd5e1;
+  font-size: 0.9rem;
+  line-height: 1.75;
+}
+
+.markdown-content ul {
+  list-style: disc;
+}
+
+.markdown-content ol {
+  list-style: decimal;
+}
+
+.markdown-content li + li {
+  margin-top: 0.4rem;
+}
+
+.markdown-content blockquote {
+  border-left: 2px solid #2dd4bf;
+  padding-left: 1rem;
+  color: #94a3b8;
+}
+
+.markdown-content code {
+  border-radius: 4px;
+  background: rgba(16, 185, 129, 0.1);
+  padding: 0.1rem 0.3rem;
+  color: #34d399;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 0.85em;
+}
+
+.markdown-content table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.8rem;
+}
+
+.markdown-content th {
+  background: #101415;
+  padding: 0.75rem 1rem;
+  color: #94a3b8;
+  font-weight: 600;
+}
+
+.markdown-content td {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 0.75rem 1rem;
+  color: #cbd5e1;
+  vertical-align: top;
+}
+
+/* 3D Flip animation for flashcards */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}

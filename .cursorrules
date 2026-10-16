@@ -1,0 +1,20 @@
+# Hard Constraints & Operational Protocol
+
+## 1. Visual Identity
+- strictly follow `DESIGN.md`.
+- Canvas: `#0b0f10`, Panel: `#101415`, Card: `#181c1d`, Accent: `#10b981`.
+- Zero design slop: no generic gradients, no white backgrounds, no low-contrast borders.
+
+## 2. Technical Architecture
+- Framework: Next.js 14 App Router.
+- Type Safety: Strict TypeScript. No `any`. Use interfaces from `@/types/content.ts`.
+- Content: Sourced from `@/data/curriculum.ts`. No hardcoded content in pages.
+- Client Components: All interactive elements (`useState`, `useEffect`) must have `'use client'`.
+
+## 3. Asset Management
+- Use inline SVGs for missing diagrams to avoid 404s.
+- Ensure 16:9 ratio for all `FigureCard` components.
+
+## 4. Performance
+- Use `generateStaticParams()` for SSG.
+- Optimize images and fonts for Bio-Informatics aesthetic.
