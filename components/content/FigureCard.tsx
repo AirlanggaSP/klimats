@@ -3,8 +3,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import type { FigureItem } from '@/types/content';
-import { X } from 'lucide-react';
-import { clsx } from 'clsx';
 
 interface FigureCardProps {
   figure: FigureItem;
@@ -14,7 +12,6 @@ export default function FigureCard({ figure }: FigureCardProps) {
   const imageRef = useRef<HTMLImageElement>(null);
   const [failedImageSrc, setFailedImageSrc] = useState<string | null>(null);
   const imageFailed = failedImageSrc === figure.imageSrc;
-  const [isZoomed, setIsZoomed] = useState(false);
 
   useEffect(() => {
     const image = imageRef.current;
